@@ -1,0 +1,29 @@
+/* pages/home-music/index.wxss */
+page {
+  background-color: #fafafa;
+}
+
+.van-search {
+  padding: 10px 0 !important;
+}
+
+.van-search__content {
+  background-color: #fff !important;
+}
+
+/* 给轮播图设置圆角 */
+/* 设置tranform=> 为了解决四个角有的不会变成圆角的情况，这是因为手机系统使用的webview的问题 */
+/* 设置了模拟器可能还是直角但是手机上是正常的 */
+.swiper {
+  border-radius: 10rpx;
+  overflow: hidden;
+  transform: translateY(0);
+}
+
+.swiper-item {
+  display: flex;
+}
+
+.swiper-image {
+  width: 100%;
+}

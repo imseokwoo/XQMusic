@@ -1,0 +1,8 @@
+<!--components/area-header/index.wxml-->
+<view class="header">
+  <view class="head-left">{{title}}</view>
+  <view class="head-right" wx:if="{{showRight}}">
+    <text>{{rightText}}</text>
+    <image src=""></image>
+  </view>
+</view>

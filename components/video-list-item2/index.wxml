@@ -1,0 +1,14 @@
+<!--components/video-list-item2/index.wxml-->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="video">
+    <view class="cover">
+        <image class="coverImg" mode="widthFix" src="{{itemInfo.coverUrl}}"></image>
+        <view class="info">
+          <text class="count">{{format.formatCount(itemInfo.playTime)}}</text>
+        </view>
+    </view>
+    <view class="content">
+        <text class="title">{{itemInfo.title}}</text>
+        <text class="nickName">{{itemInfo.creator[0].userName}}</text>
+    </view>
+</view>
