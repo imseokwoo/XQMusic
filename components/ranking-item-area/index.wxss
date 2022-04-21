@@ -1,0 +1,66 @@
+/* components/ranking-item-area/index.wxss */
+.item {
+  display: flex;
+  justify-content: space-between;
+  width: 355px;
+  background-color: #eee;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.content {
+  flex: 1;
+  padding: 24rpx;
+  overflow: hidden;
+}
+
+.content-title {
+  font-size: 34rpx;
+}
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+}
+
+.content-list-item {
+  color: #333;
+  margin-top: 6rpx;
+  width: 100%;
+
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* 改变单词之间的间距使得每行对齐： */
+  text-emphasis: none;
+}
+
+.content-list-item .singer {
+  color: #999;
+}
+
+.cover {
+  position: relative;
+  width: 220rpx;
+  display: flex;
+}
+
+.cover .image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cover .playCount {
+  position: absolute;
+  right: 0;
+  bottom: 0rpx;
+  color: #fff;
+  font-size: 22rpx;
+  border-radius: 12rpx;
+  padding: 6rpx 10rpx;
+  background: rgba(0,0,0,.5);
+}

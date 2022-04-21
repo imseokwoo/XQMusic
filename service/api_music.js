@@ -5,3 +5,18 @@ export function getBanners() {
     type: 2
   })
 }
+
+export function getRankings(idx) {
+  return xqRequest.get("/top/list", {
+    idx
+  })
+}
+
+// cat -> category 类别
+export function getSongMenu(cat="全部", limit=6, offset=0) {
+  return xqRequest.get("/top/playlist", {
+    cat,
+    limit,
+    offset
+  })
+}
