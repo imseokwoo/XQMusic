@@ -1,13 +1,10 @@
-// components/song-menu-item/index.js
+// components/detail-menu-item/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    item: {
-      type: Object,
-      value: {}
-    }
+
   },
 
   /**
@@ -21,6 +18,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
+
   }
 })

@@ -1,12 +1,12 @@
-// components/song-menu-item/index.js
+// components/song-detail-header/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    item: {
+    songInfo: {
       type: Object,
-      value: {}
+      value: ""
     }
   },
 
@@ -21,6 +21,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
+
   }
 })

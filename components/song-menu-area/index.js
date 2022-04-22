@@ -27,6 +27,16 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handleMenuItemClick: function(event) {
+      const item = event.currentTarget.dataset.item
+      wx.navigateTo({
+        url: `/packageDetail/pages/detail-songs/index?id=${item.id}&type=menu`,
+      })
+    },
+    hotSongsHeaderClick: function() {
+      wx.navigateTo({
+        url: `/packageDetail/pages/detail-menu/index`,
+      })
+    }
   }
 })

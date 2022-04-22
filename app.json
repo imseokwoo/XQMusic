@@ -5,6 +5,29 @@
     "pages/detail-video/index",
     "pages/detail-search/index"
   ],
+  "subPackages": [
+    {
+      "root": "packageDetail",
+      "name": "pDetail",
+      "pages": [
+        "pages/detail-songs/index",
+        "pages/detail-menu/index"
+      ]
+    },
+    {
+      "root": "packagePlayer",
+      "name": "pPlayer",
+      "pages": [
+        "pages/music-player/index"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/home-music/index": {
+      "network": "all",
+      "packages": [ "packageDetail", "packagePlayer" ]
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fafafa",

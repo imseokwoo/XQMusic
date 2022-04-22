@@ -1,10 +1,10 @@
 <!--pages/detail-songs/index.wxml-->
-<!-- <block wx:if="{{type === 'rank'}}"> -->
+<block wx:if="{{type === 'rank'}}">
   <area-header title="{{songInfo.name}}" showRight="{{false}}"></area-header>
-<!-- </block> -->
-<!-- <block wx:elif="{{type === 'menu'}}">
+</block>
+<block wx:elif="{{type === 'menu'}}">
   <song-detail-header songInfo="{{songInfo}}"></song-detail-header>
-</block> -->
+</block>
 
 <view class="song-list">
   <block wx:for="{{songInfo.tracks}}" wx:key="id">

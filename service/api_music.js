@@ -20,3 +20,10 @@ export function getSongMenu(cat="全部", limit=6, offset=0) {
     offset
   })
 }
+
+// 获取歌单详情
+export function getSongMenuDetail(id) {
+  return xqRequest.get("/playlist/detail/dynamic", {
+    id
+  })
+}
