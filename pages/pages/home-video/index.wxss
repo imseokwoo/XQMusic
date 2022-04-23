@@ -1,0 +1,10 @@
+.video {
+  display: flex;
+  flex-wrap: wrap;
+  /* 每个元素周围分配相同的空间 */
+  justify-content: space-around;
+}
+
+.item {
+  width: 48%;
+}

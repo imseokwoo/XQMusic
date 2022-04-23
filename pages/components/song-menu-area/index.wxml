@@ -1,0 +1,17 @@
+<!--components/song-menu-area/index.wxml-->
+<area-header title="{{title}}" bind:click="hotSongsHeaderClick"></area-header>
+
+<!-- 要是滚动区域在手机宽度区域内两种方法 
+    1.设置scroll的宽度为手机屏幕宽度 
+    2.设置样式width：100vw,position:relative,left: -20rpx-->
+    
+<!-- <scroll-view scroll-x class="menu-list" style="width: {{screenWidth}}px"></scroll-view> -->
+<scroll-view scroll-x class="menu-list">
+  <block wx:for="{{songMenu}}" wx:key="id">
+    <view class="menu-item">
+      <song-menu-item item="{{item}}"
+                      bindtap="handleMenuItemClick"
+                      data-item="{{item}}"></song-menu-item>
+    </view>
+  </block>
+</scroll-view>

@@ -1,0 +1,11 @@
+<!--packageDetail/pages/detail-menu/index.wxml-->
+<view class="detail-menu">
+  <view class="title"></view>
+  <block wx:for="{{item}}" wx:key="*this">
+    <view class="detail-menu-list">
+      <song-menu-item item="{{item}}"
+                      bindtap="handleMenuItemClick"
+                      data-item="{{item}}"></song-menu-item>
+    </view>
+  </block>
+</view>

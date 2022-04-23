@@ -1,0 +1,32 @@
+function formatCount(count) {
+  var counter = parseInt(count)
+  if(counter > 100000000) {
+    return (counter / 100000000).toFixed(1) + "亿";
+  } else if (counter > 10000) {
+    return (counter / 10000).toFixed(1) + "万"
+  } else {
+    return counter + ""
+  }
+}
+// 视频时长处理
+function padLeftZero(time) {
+  // 转成字符串
+  time = time + ""
+  // 字符串截取slice
+  // 传进来12 -> 0012 -> 截取两位 -> 12
+  // 传进来5 -> 005 -> 截取一位 -> 05
+  return ("00" + time).slice(time.length)
+}
+function formatDuration(duration) {
+  duration = duration / 1000
+  var minute = Math.floor(duration / 60)
+  var second = Math.floor(duration % 60)
+  return padLeftZero(minute) + ":" + padLeftZero(second)
+}
+// 不支持ES6语法
+// commonjs语法 导出函数
+module.exports = {
+  // 不支持对象的增强写法 formatCount
+  formatCount: formatCount,
+  formatDuration: formatDuration
+}
