@@ -2,7 +2,7 @@
 .item {
   display: flex;
   justify-content: space-between;
-  width: 355px;
+  /* width: 355px; */
   background-color: #eee;
   border-radius: 12rpx;
   overflow: hidden;

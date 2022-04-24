@@ -35,6 +35,18 @@
           "pathName": "packagePlayer/pages/music-player/index",
           "query": "id=1901371647",
           "scene": null
+        },
+        {
+          "name": "home-profile",
+          "pathName": "pages/home-profile/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "home-music",
+          "pathName": "pages/home-music/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

@@ -7,6 +7,7 @@
   bind:click-input="toSearch"
 />
 
+<!-- 轮播图 -->
 <swiper class="swiper"
         indicator-dots
         autoplay
@@ -22,15 +23,17 @@
   </block>
 </swiper>
 
+<!-- 推荐歌曲 -->
 <view wx:if="{{recommendSongs.length > 0}}">
   <area-header title="推荐歌曲" bind:click="handleMoreClick"/>
   <view class="song-list">
     <block wx:for="{{recommendSongs}}" wx:key="id">
-      <song-item-v1 item="{{item}}"></song-item-v1>
+      <song-item-v1 item="{{item}}" bindtap="handleSongItemClick" data-index="{{index}}"></song-item-v1>
     </block>
   </view>
 </view>
 
+<!-- 歌单 -->
 <song-menu-area title="热门歌单"
                 songMenu="{{hotSongMenu}}"
                 wx:if="{{hotSongMenu.length > 0}}"></song-menu-area>
@@ -47,5 +50,25 @@
                          data-idx="{{index}}">
       </ranking-item-area>
     </block>
+  </view>
+</view>
+
+<!-- 播放工具栏 -->
+<view class="play-bar-placeholder" wx:if="{{currentSong.id}}"></view>
+<view class="play-bar" 
+      bindtap="handlePlayBarClick"
+      wx:if="{{currentSong.id}}">
+  <view class="left">
+    <image class="album album-anim" 
+           style="animation-play-state: {{playAnimState}};"
+           mode="widthFix"
+           src="{{currentSong.al.picUrl}}"></image>
+    <view class="name">{{currentSong.name}}</view>
+  </view>
+  <view class="right">
+    <image class="icon play" 
+           catchtap="handlePlayBtnClick"
+           src="/assets/images/music/{{isPlaying ? 'pause' : 'play'}}_icon.png"></image>
+    <image class="icon playlist" src="/assets/images/music/playlist_icon.png"></image>
   </view>
 </view>

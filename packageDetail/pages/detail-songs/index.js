@@ -1,4 +1,4 @@
-import { rankingStore } from '../../../store/index'
+import { rankingStore, playerStore } from '../../../store/index'
 import { getSongMenuDetail } from "../../../service/api_music"
 
 Page({
@@ -17,7 +17,6 @@ Page({
       rankingStore.onState(ranking, this.getRankingDataHanlder)
     } else if( type === 'menu') {
       const id = options.id
-      console.log(id)
       getSongMenuDetail(id).then(res => {
         this.setData({
           songInfo: res.playlist
@@ -29,6 +28,13 @@ Page({
 
   getRankingDataHanlder: function(res) {
     this.setData({ songInfo: res })
+  },
+
+  // 点击跳转到播放页并修改播放歌单和索引
+  handleSongItemClick: function(event) {
+    const index = event.currentTarget.dataset.index
+    playerStore.setState("playListSongs", this.data.songInfo.tracks)
+    playerStore.setState("playListIndex", index)
   },
 
   onUnload: function () {

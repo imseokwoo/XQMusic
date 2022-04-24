@@ -52,7 +52,7 @@ Page({
     // 页面跳转
     wx.navigateTo({
       // url: '../detail-video/index?id=' + id,
-      url: `../detail-video/index?id=${id}`
+      url: `/packageDetail/pages/detail-video/index?id=${id}`
     })
   },
 
